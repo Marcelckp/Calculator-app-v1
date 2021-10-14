@@ -1,6 +1,24 @@
     .App {
         background-color: #3B4664;
-        height: 100vh
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        min-height: 100vh;
+        cursor: pointer;
+        overflow: scroll;
+        transition: background-color 1s ease
+    }
+    
+    .theme2 {
+        background-color: white;
+        transition: background-color 1s ease
+    }
+    
+    .theme3 {
+        background-color: purple;
+        transition: background-color 1s ease
     }
     
     *,
@@ -10,7 +28,17 @@
     }
     
     .calculatorBody {
-        padding-top: 20px
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding-top: 30px;
+        /* height: 100vh; */
+        /* max-width: 600px; */
+        width: 0px;
+        min-width: 380px;
+        max-width: 600px;
+        transition: width 2s ease
     }
     
     .calculatorHeader {
@@ -20,7 +48,8 @@
         justify-content: space-between;
         max-width: 92%;
         margin-bottom: 20px;
-        color: white
+        color: white;
+        transition: color 1s ease
     }
     
     .ThemeSlider {
@@ -33,9 +62,34 @@
         margin-right: 20px
     }
     
+    .Theme-title-theme2 {
+        color: black;
+        transition: color 1s ease
+    }
+    
+    .Theme-title-theme3 {
+        color: yellow;
+        transition: color 1s ease
+    }
+    
     .Theme-slider {
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
+    }
+    
+    @media only screen and (min-width: 600px) {
+        .calculatorBody {
+            width: 600px;
+            transition-timing-function: 1s ease;
+            transition: width 1s ease
+        }
+        /* .App {
+            max-width: 600px;
+        } */
+    }
+    
+    .scrollbar-hidden::-webkit-scrollbar {
+        display: none
     }

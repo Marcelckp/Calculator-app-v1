@@ -1,140 +1,98 @@
-import React, { useState } from 'react';
-import { setState } from '../../feature/countSlice'
-import { useDispatch } from 'react-redux';
-import './Buttons.css'
+import { useState } from 'react';
+import './Buttons.css';
+import './Screen.css';
 
 function Buttons() {
 
-    const dispatch = useDispatch();
     
-    const [currentValStr, setCurrentValStr] = useState('');
-    
-    const [prevValStr, setPrevValStr] = useState('');
+    const [calculation, setCalculation] = useState('');
+    const [result, setResult] = useState(null);
 
-    const [operand, setOperand] = useState('');
-
-    let str = '';
-
-    const addToValStr = (num) => {
-        if (currentValStr.length === '') {
-            // setCurrentValStr(num)
-            str += num
-        } else setCurrentValStr(prevVal => prevVal + num);
-
-        console.log("CURRENT VAL " +currentValStr)
-        console.log('PREV VAL '+ prevValStr)
-
-        console.log(str)
-
-        dispatch(setState(currentValStr))
-    }
-
-    const setOperation = (operand) => {
-        if (prevValStr) {
-            console.log('calculation');
-            if (operand === '+') setCurrentValStr(`${parseFloat(prevValStr) + parseFloat(currentValStr)}`);
-            else if (operand === '-') setCurrentValStr(`${parseFloat(prevValStr) - parseFloat(currentValStr)}`)
-            else if (operand === '*') setCurrentValStr(`${parseFloat(prevValStr) * parseFloat(currentValStr)}`)
-            else if (operand === '/') setCurrentValStr(`${parseFloat(prevValStr) / parseFloat(currentValStr)}`)
-            else return
-
-            console.log(currentValStr)
-        } else {
-            setPrevValStr(currentValStr);
-            setCurrentValStr('');
-            setOperand(operand);
-        }
-        dispatch(setState(currentValStr))
+    const addToValStr = num => {
+        setResult(null)
+        setCalculation(calculation + num);
     }
 
     const deleteFromValStr = () => {
-        if (currentValStr) {
-            let val = currentValStr.split('');
+        if (calculation.length === 0) {
+            return;
+        } else {
+            let val = calculation.split('');
             val.pop();
-            console.log(val)
-            setCurrentValStr(val.join(''))
+            setCalculation(val.join(''));
+        }
+    }
+
+    const resetCal = () => {
+        setCalculation('');
+        setResult(null);
+    }
+
+    const equalsPressed = () => {
+        if (!result) {
+            setResult(eval(calculation));
+            // setCalculation('');
         } else {
             return
         }
 
-        dispatch(setState(currentValStr))
+        // console.log(eval(calculation));
     }
-
-    const resetCal = () => {
-        setOperand('');
-        setPrevValStr('');
-        setCurrentValStr('');
-        dispatch(setState(currentValStr))
-    }
-
-    const equalsPressed = () => {
-        if(prevValStr.length === 0) {
-            setPrevValStr(currentValStr);
-            setCurrentValStr('');
-        } else {
-            console.log('calculation');
-            if (operand === '+') setCurrentValStr(`${parseFloat(prevValStr) + parseFloat(currentValStr)}`);
-            else if (operand === '-') setCurrentValStr(`${parseFloat(prevValStr) - parseFloat(currentValStr)}`)
-            else if (operand === '*') setCurrentValStr(`${parseFloat(prevValStr) * parseFloat(currentValStr)}`)
-            else if (operand === '/') setCurrentValStr(`${parseFloat(prevValStr) / parseFloat(currentValStr)}`)
-            else return
-
-            console.log(currentValStr)
-        }
-
-        dispatch(setState(currentValStr))
-    }
-
-    const setDecimal = () => {
-        dispatch(setState(currentValStr))
-    }
-
 
     return (
+        <>
+        <div className={`Screen`}>
+            <div className='Screen-container'>
+                {/* <div>
+                    <h1 className="screen-previous"></h1>
+                </div> */}
+                {result || result === 0 ? 
+                    <div><h1 className="screenShape" style={{color: '#D03F30'}}>{result}</h1></div>
+                :
+                    <div><h1 className="screenShape">{calculation || 0}</h1></div>}
+                
+            </div>
+        </div>
         <div className="Buttons">
             <div className="Buttons-container">
-            
-                    <button className='btn' onClick={(e) => {
-                        e.preventDefault()
-                    setCurrentValStr(prevVal => prevVal + e.target.innerText)
-                    dispatch(setState(currentValStr))
-                    }}>7</button>
+                    <button className='btn hov' onClick={() => addToValStr('7')}>7</button>
 
-                    <button className='btn' onClick={(e) => addToValStr(e.target.innerText)}>8</button>
+                    <button className='btn hov' onClick={(e) => addToValStr(e.target.innerText)}>8</button>
 
-                    <button className='btn' onClick={(e) => addToValStr(e.target.innerText)}>9</button>
+                    <button className='btn hov' onClick={(e) => addToValStr(e.target.innerText)}>9</button>
 
                     <button className="calc-Del" onClick={(e) => deleteFromValStr()}>DEL</button>
 
-                    <button className='btn' onClick={(e) => addToValStr(e.target.innerText)}>4</button>
+                    <button className='btn hov' onClick={(e) => addToValStr(e.target.innerText)}>4</button>
 
-                    <button className='btn' onClick={(e) => addToValStr(e.target.innerText)}>5</button>
+                    <button className='btn hov' onClick={(e) => addToValStr(e.target.innerText)}>5</button>
 
-                    <button className='btn' onClick={(e) => addToValStr(e.target.innerText)}>6</button>
+                    <button className='btn hov' onClick={(e) => addToValStr(e.target.innerText)}>6</button>
 
-                    <button className='btn' onClick={() => setOperation('+')}>+</button>
+                    <button className='btn hov' onClick={(e) => addToValStr(e.target.innerText)}>+</button>
 
-                    <button className='btn' onClick={(e) => addToValStr(e.target.innerText)}>1</button>
+                    <button className='btn hov' onClick={(e) => addToValStr(e.target.innerText)}>1</button>
 
-                    <button className='btn' onClick={(e) => addToValStr(e.target.innerText)}>2</button>
+                    <button className='btn hov' onClick={(e) => addToValStr(e.target.innerText)}>2</button>
 
-                    <button className='btn' onClick={(e) => addToValStr(e.target.innerText)}>3</button>
+                    <button className='btn hov' onClick={(e) => addToValStr(e.target.innerText)}>3</button>
 
-                    <button className='btn'onClick={() => setOperation('-')}>-</button>
+                    <button className='btn hov'onClick={() => addToValStr('-')}>-</button>
 
-                    <button className='btn' onClick={() => setDecimal()}>.</button>
+                    <button className='btn hov' onClick={() => addToValStr('.')}>.</button>
 
-                    <button className='btn' onClick={(e) => addToValStr(e.target.innerText)}>0</button>
+                    <button className='btn hov' onClick={(e) => addToValStr(e.target.innerText)}>0</button>
 
-                    <button className='btn' onClick={() => setOperation('-')}>/</button>
+                    <button className='btn hov' onClick={() => addToValStr('/')}>/</button>
 
-                    <button className='btn' onClick={() => setOperation('*')}>X</button>
+                    <button className='btn hov' onClick={() => addToValStr('*')}>X</button>
 
                     <button className='ResetBtn' onClick={() => resetCal()}>RESET</button>
                     <button className='EqualBtn' onClick={() => equalsPressed()}>=</button>
                 
             </div>
         </div>
+        </>
     )
 }
 

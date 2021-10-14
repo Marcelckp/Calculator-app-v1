@@ -4,6 +4,25 @@
     font-family: 'Spartan', sans-serif;
 }
 
+body {
+    background-color: transparent;
+    /* height: 100vh */
+}
+
+::-webkit-scrollbar {
+    height: 5px;
+    border-radius: 50px;
+    background-color: grey;
+    width: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 50px;
+    scrollbar-color: green blue;
+    transition: scrollbar-color 0.5s ease-out;
+}
+
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }

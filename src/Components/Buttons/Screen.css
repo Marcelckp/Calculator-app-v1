@@ -10,5 +10,6 @@
     text-align: right;
     padding: 20px;
     color: white;
-    min-height: 80px
+    min-height: 80px;
+    overflow-x: scroll;
 }
