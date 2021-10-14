@@ -1,0 +1,41 @@
+    .App {
+        background-color: #3B4664;
+        height: 100vh
+    }
+    
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+    
+    .calculatorBody {
+        padding-top: 20px
+    }
+    
+    .calculatorHeader {
+        margin: auto;
+        display: flex;
+        /* flex-direction: row; */
+        justify-content: space-between;
+        max-width: 92%;
+        margin-bottom: 20px;
+        color: white
+    }
+    
+    .ThemeSlider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .Theme-Title {
+        margin-right: 20px
+    }
+    
+    .Theme-slider {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }

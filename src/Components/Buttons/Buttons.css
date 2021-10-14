@@ -1,0 +1,77 @@
+.Buttons {
+    /* width: 100%; */
+    margin: auto;
+    min-width: 33%;
+    max-width: 92%
+    /* height: 90%; */
+}
+
+.Buttons-container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: #292A49;
+    /* width: 100%; */
+    padding: 20px 10px;
+    border-radius: 10px;
+    max-height: 100vh;
+    height: auto;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(5, 70px);
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.Buttons-container button {
+    cursor: pointer;
+    outline: none;
+}
+
+.Buttons-container button:hover {
+    background-color: rgb(0, 0, 0, 0.5);
+    color: white;
+}
+
+.Buttons .btn {
+    padding: 20px;
+    /* margin-right: 10px; */
+    background-color: #E8E4DB;
+    border: none;
+    color: #323A45;
+    border-radius: 5px;
+    border-bottom: 4px solid#B2A295;
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.calc-Del,
+.ResetBtn {
+    background-color: #647299;
+    color: white;
+    border: none;
+    border-bottom: 4px solid #414F76;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px
+}
+
+.ResetBtn {
+    grid-column: span 2
+}
+
+.EqualBtn {
+    grid-column: span 2;
+}
+
+.EqualBtn {
+    background-color: #D03F30;
+    color: white;
+    border: none;
+    border-bottom: 4px solid #922619;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 25px;
+}

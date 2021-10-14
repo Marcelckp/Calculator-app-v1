@@ -1,0 +1,14 @@
+.Screen {
+    margin: auto;
+    max-width: 92%;
+    margin-bottom: 20px
+}
+
+.Screen-container {
+    background-color: #181F33;
+    border-radius: 10px;
+    text-align: right;
+    padding: 20px;
+    color: white;
+    min-height: 80px
+}
