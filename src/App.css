@@ -12,12 +12,12 @@
     }
     
     .theme2 {
-        background-color: white;
+        background-color: #E6E6E6;
         transition: background-color 1s ease
     }
     
     .theme3 {
-        background-color: purple;
+        background-color: #17062A;
         transition: background-color 1s ease
     }
     
@@ -63,12 +63,12 @@
     }
     
     .Theme-title-theme2 {
-        color: black;
+        color: #37392E;
         transition: color 1s ease
     }
     
     .Theme-title-theme3 {
-        color: yellow;
+        color: #FEE63E;
         transition: color 1s ease
     }
     
@@ -85,9 +85,6 @@
             transition-timing-function: 1s ease;
             transition: width 1s ease
         }
-        /* .App {
-            max-width: 600px;
-        } */
     }
     
     .scrollbar-hidden::-webkit-scrollbar {

@@ -19,8 +19,8 @@ body {
 ::-webkit-scrollbar-thumb {
     background-color: white;
     border-radius: 50px;
-    scrollbar-color: green blue;
-    transition: scrollbar-color 0.5s ease-out;
+    /* scrollbar-color: green blue;
+    transition: scrollbar-color 0.5s ease-out; */
 }
 
 code {

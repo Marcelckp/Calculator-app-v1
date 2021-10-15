@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './Buttons.css';
 import './Screen.css';
 
-function Buttons() {
+function Buttons(props) {
 
     
     const [calculation, setCalculation] = useState('');
@@ -39,10 +39,12 @@ function Buttons() {
         // console.log(eval(calculation));
     }
 
+    console.log(props.class)
+
     return (
         <>
         <div className={`Screen`}>
-            <div className='Screen-container'>
+            <div className={`Screen-container ${props.class === '2' ? 'Screen-container-theme2' : props.class === '3' ? 'Screen-container-theme3' : null}`}>
                 {/* <div>
                     <h1 className="screen-previous"></h1>
                 </div> */}
@@ -54,41 +56,41 @@ function Buttons() {
             </div>
         </div>
         <div className="Buttons">
-            <div className="Buttons-container">
-                    <button className='btn hov' onClick={() => addToValStr('7')}>7</button>
+            <div className={`Buttons-container ${props.class === '2' ? 'Buttons-container-theme2' : props.class === '3' ? 'Buttons-container-theme3' : null}`}>
+                    <button className={`btn hov ${props.class === '2' ? 'btn-pad-theme2' : props.class === '3' ? 'btn-pad-theme3' : null}`} onClick={() => addToValStr('7')}>7</button>
 
-                    <button className='btn hov' onClick={(e) => addToValStr(e.target.innerText)}>8</button>
+                    <button className={`btn hov ${props.class === '2' ? 'btn-pad-theme2' : props.class === '3' ? 'btn-pad-theme3' : null}`} onClick={(e) => addToValStr(e.target.innerText)}>8</button>
 
-                    <button className='btn hov' onClick={(e) => addToValStr(e.target.innerText)}>9</button>
+                    <button className={`btn hov ${props.class === '2' ? 'btn-pad-theme2' : props.class === '3' ? 'btn-pad-theme3' : null}`} onClick={(e) => addToValStr(e.target.innerText)}>9</button>
 
-                    <button className="calc-Del" onClick={(e) => deleteFromValStr()}>DEL</button>
+                    <button className={`calc-Del ${props.class === '2' ? 'func-theme2' : props.class === '3' ? 'func-theme3' : null}`} onClick={(e) => deleteFromValStr()}>DEL</button>
 
-                    <button className='btn hov' onClick={(e) => addToValStr(e.target.innerText)}>4</button>
+                    <button className={`btn hov ${props.class === '2' ? 'btn-pad-theme2' : props.class === '3' ? 'btn-pad-theme3' : null}`} onClick={(e) => addToValStr(e.target.innerText)}>4</button>
 
-                    <button className='btn hov' onClick={(e) => addToValStr(e.target.innerText)}>5</button>
+                    <button className={`btn hov ${props.class === '2' ? 'btn-pad-theme2' : props.class === '3' ? 'btn-pad-theme3' : null}`} onClick={(e) => addToValStr(e.target.innerText)}>5</button>
 
-                    <button className='btn hov' onClick={(e) => addToValStr(e.target.innerText)}>6</button>
+                    <button className={`btn hov ${props.class === '2' ? 'btn-pad-theme2' : props.class === '3' ? 'btn-pad-theme3' : null}`} onClick={(e) => addToValStr(e.target.innerText)}>6</button>
 
-                    <button className='btn hov' onClick={(e) => addToValStr(e.target.innerText)}>+</button>
+                    <button className={`btn hov ${props.class === '2' ? 'btn-pad-theme2' : props.class === '3' ? 'btn-pad-theme3' : null}`} onClick={(e) => addToValStr(e.target.innerText)}>+</button>
 
-                    <button className='btn hov' onClick={(e) => addToValStr(e.target.innerText)}>1</button>
+                    <button className={`btn hov ${props.class === '2' ? 'btn-pad-theme2' : props.class === '3' ? 'btn-pad-theme3' : null}`} onClick={(e) => addToValStr(e.target.innerText)}>1</button>
 
-                    <button className='btn hov' onClick={(e) => addToValStr(e.target.innerText)}>2</button>
+                    <button className={`btn hov ${props.class === '2' ? 'btn-pad-theme2' : props.class === '3' ? 'btn-pad-theme3' : null}`} onClick={(e) => addToValStr(e.target.innerText)}>2</button>
 
-                    <button className='btn hov' onClick={(e) => addToValStr(e.target.innerText)}>3</button>
+                    <button className={`btn hov ${props.class === '2' ? 'btn-pad-theme2' : props.class === '3' ? 'btn-pad-theme3' : null}`} onClick={(e) => addToValStr(e.target.innerText)}>3</button>
 
-                    <button className='btn hov'onClick={() => addToValStr('-')}>-</button>
+                    <button className={`btn hov ${props.class === '2' ? 'btn-pad-theme2' : props.class === '3' ? 'btn-pad-theme3' : null}`}onClick={() => addToValStr('-')}>-</button>
 
-                    <button className='btn hov' onClick={() => addToValStr('.')}>.</button>
+                    <button className={`btn hov ${props.class === '2' ? 'btn-pad-theme2' : props.class === '3' ? 'btn-pad-theme3' : null}`} onClick={() => addToValStr('.')}>.</button>
 
-                    <button className='btn hov' onClick={(e) => addToValStr(e.target.innerText)}>0</button>
+                    <button className={`btn hov ${props.class === '2' ? 'btn-pad-theme2' : props.class === '3' ? 'btn-pad-theme3' : null}`} onClick={(e) => addToValStr(e.target.innerText)}>0</button>
 
-                    <button className='btn hov' onClick={() => addToValStr('/')}>/</button>
+                    <button className={`btn hov ${props.class === '2' ? 'btn-pad-theme2' : props.class === '3' ? 'btn-pad-theme3' : null}`} onClick={() => addToValStr('/')}>/</button>
 
-                    <button className='btn hov' onClick={() => addToValStr('*')}>X</button>
+                    <button className={`btn hov ${props.class === '2' ? 'btn-pad-theme2' : props.class === '3' ? 'btn-pad-theme3' : null}`} onClick={() => addToValStr('*')}>X</button>
 
-                    <button className='ResetBtn' onClick={() => resetCal()}>RESET</button>
-                    <button className='EqualBtn' onClick={() => equalsPressed()}>=</button>
+                    <button className={`ResetBtn ${props.class === '2' ? 'func-theme2' : props.class === '3' ? 'func-theme3' : null}`} onClick={() => resetCal()}>RESET</button>
+                    <button className={`EqualBtn ${props.class === '2' ? 'EqualBtn-theme2' : props.class === '3' ? 'EqualBtn-theme3' : null}`} onClick={() => equalsPressed()}>=</button>
                 
             </div>
         </div>

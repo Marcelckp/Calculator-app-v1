@@ -2,7 +2,7 @@
     /* width: 100%; */
     margin: auto;
     min-width: 33%;
-    max-width: 92%
+    max-width: 92%;
     /* height: 90%; */
 }
 
@@ -14,12 +14,24 @@
     /* width: 100%; */
     padding: 20px 10px;
     border-radius: 10px;
-    max-height: 100vh;
+    /* max-height: 100vh; */
     height: auto;
     grid-template-columns: repeat(4, 70px);
     grid-template-rows: repeat(5, 70px);
     row-gap: 10px;
     column-gap: 10px;
+    margin-bottom: 20px;
+    transition: all 1s ease;
+}
+
+.Buttons-container-theme2 {
+    background-color: #D3CDCD;
+    transition: all 1s ease;
+}
+
+.Buttons-container-theme3 {
+    background-color: #1E0836;
+    transition: all 1s ease;
 }
 
 .Buttons-container button {
@@ -27,7 +39,7 @@
     outline: none;
 }
 
-.Buttons .btn {
+.btn {
     padding: 20px;
     /* margin-right: 10px; */
     background-color: #E8E4DB;
@@ -35,9 +47,7 @@
     color: #323A45;
     border-radius: 5px;
     border-bottom: 4px solid#B2A295;
-    width: 70px;
-    height: 70px;
-    font-size: 30px;
+    font-size: 2em;
     font-weight: bold;
     text-align: center;
 }
@@ -50,7 +60,8 @@
     border-bottom: 4px solid #414F76;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 15px
+    font-size: 15px;
+    transition: all 1s ease
 }
 
 .ResetBtn {
@@ -59,7 +70,19 @@
 
 .ResetBtn:hover,
 .calc-Del:hover {
-    background-color: #374364
+    background-color: #374364;
+    transition: all 0.3s ease;
+}
+
+.EqualBtn:hover {
+    background-color: #722118;
+    transition: all 0.3s ease;
+}
+
+.hov:hover {
+    background-color: #796d64;
+    color: white;
+    transition: all 0.3s ease;
 }
 
 .EqualBtn {
@@ -74,13 +97,82 @@
     border-radius: 5px;
     font-weight: bold;
     font-size: 25px;
+    transition: all 1s ease
 }
 
-.EqualBtn:hover {
-    background-color: #722118
+.EqualBtn-theme2 {
+    background-color: #C85401;
+    border-bottom: 4px solid #863A01;
+    transition: all 1s ease;
 }
 
-.hov:hover {
-    background-color: #796d64;
-    color: white;
+.EqualBtn-theme2:hover {
+    background-color: #8b420d;
+}
+
+.EqualBtn-theme3 {
+    background-color: #00DECF;
+    border-bottom: 4px solid #6DF8EF;
+    color: black;
+    transition: all 1s ease;
+}
+
+.EqualBtn-theme3:hover {
+    background-color: #159c93
+}
+
+.func-theme2 {
+    background-color: #388187;
+    border-bottom: 4px solid #285b5f;
+    transition: all 1s ease
+}
+
+.func-theme2:hover {
+    background-color: #204447
+}
+
+.func-theme3 {
+    background-color: #56077C;
+    border-bottom: 4px solid #BD16F4;
+    transition: all 1s ease
+}
+
+.func-theme3:hover {
+    background-color: #460f5f
+}
+
+.btn-pad-theme2 {
+    background-color: #E5E4E0;
+    border-bottom: 4px solid #b8b8b8;
+    color: #37392E;
+    transition: all 1s ease;
+}
+
+.btn-pad-theme2:hover {
+    background-color: #979692;
+}
+
+.btn-pad-theme3 {
+    background-color: #331B4D;
+    border-bottom: 4px solid #86209D;
+    color: #FEE63E;
+    transition: all 1s ease;
+}
+
+.btn-pad-theme3:hover {
+    background-color: #2a1342
+}
+
+@media only screen and (min-width: 600px) {
+    .Buttons-container button,
+    .btn {
+        /* height: 100px;
+        width: 100px; */
+        transition: all 1s ease;
+    }
+    .Buttons-container {
+        grid-template-columns: repeat(4, 100px);
+        grid-template-rows: repeat(5, 100px);
+        transition-timing-function: ease;
+    }
 }

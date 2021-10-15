@@ -10,6 +10,27 @@
     text-align: right;
     padding: 20px;
     color: white;
-    min-height: 80px;
+    height: 80px;
     overflow-x: scroll;
+    transition: all 1s ease;
+}
+
+.Screen-container-theme2 {
+    background-color: #EEEEEE;
+    color: #37392E;
+    transition: background-color 1s ease;
+}
+
+.Screen-container-theme3 {
+    background-color: #1E0836;
+    color: #FEE63E;
+    transition: all 1s ease;
+}
+
+@media only screen and (min-width: 600px) {
+    .Screen-container {
+        height: 150px;
+        font-size: 2em;
+        transition: all 1s ease
+    }
 }
