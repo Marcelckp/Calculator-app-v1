@@ -173,6 +173,8 @@
     .Buttons-container {
         grid-template-columns: repeat(4, 100px);
         grid-template-rows: repeat(5, 100px);
+        padding: 50px 0;
         transition-timing-function: ease;
+        transition: all 1s ease
     }
 }

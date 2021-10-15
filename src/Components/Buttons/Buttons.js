@@ -8,9 +8,20 @@ function Buttons(props) {
     const [calculation, setCalculation] = useState('');
     const [result, setResult] = useState(null);
 
+    const operands = ['*', '+', '/', '-', '.'];
+
     const addToValStr = num => {
-        setResult(null)
-        setCalculation(calculation + num);
+        if (num === '/' || num === '*' || num === '+' || num === '-' || num === '.'){
+            if (calculation.length > 1 && operands.includes(calculation.slice(-1))) {
+                return;
+            } else {
+                setResult(null)
+                setCalculation(calculation + num)
+            }
+        } else {
+            setResult(null)
+            setCalculation(calculation + num);
+        }
     }
 
     const deleteFromValStr = () => {
@@ -29,17 +40,17 @@ function Buttons(props) {
     }
 
     const equalsPressed = () => {
-        if (!result) {
+        if (!result && !operands.includes(calculation.slice(-1))) {
             setResult(eval(calculation));
-            // setCalculation('');
-        } else {
-            return
+            setCalculation(eval(calculation));
+        } else if (!result && operands.includes(calculation.slice(-1))) {
+            alert('Check Your calculation you evaluated a incomplete sum')
         }
 
         // console.log(eval(calculation));
     }
 
-    console.log(props.class)
+    // console.log(props.class)
 
     return (
         <>
