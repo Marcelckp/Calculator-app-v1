@@ -1,13 +1,24 @@
 import React, { useState } from 'react'
+import { useCookies } from 'react-cookie';
 import './App.css';
+
 
 //components
 import Buttons from './Components/Buttons/Buttons';
 
 function App() {
 
-  const [theme, setTheme] = useState(1);
-  const [calSheetClicked, setSheetClicked] = useState(false)
+  const [cookies, setCookies] = useCookies(['theme'])
+
+  const handleCookie = (val) => {
+    setCookies('theme', val, {
+      path: '/'
+    });
+  }
+
+  const [theme, setTheme] = useState(cookies.theme || 1);
+  const [calSheetClicked, setSheetClicked] = useState(false);
+  console.log(cookies);
 
   return (
     <div className={`App ${theme === '2' ? 'theme2' : theme === '3' ? 'theme3' : null}`}>
@@ -25,7 +36,10 @@ function App() {
           <div className="ThemeSlider">
             <p className={`Theme-Title`}>THEME</p>
             <div className='Theme-slider'>
-              <p onClick={(e) => setTheme(e.target.innerText)}><span>1</span> <span>2</span> <span>3</span></p>
+              <p onClick={(e) => {
+                handleCookie(e.target.innerText)
+                setTheme(e.target.innerText)
+              }}><span>1</span> <span>2</span> <span>3</span></p>
               {/* <button type='radio'>soldit</button> */}
             </div>
           </div>
