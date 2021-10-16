@@ -40,7 +40,7 @@ function App() {
                 handleCookie(e.target.innerText)
                 setTheme(e.target.innerText)
               }}><span>1</span> <span>2</span> <span>3</span></p>
-              {/* <button type='radio'>soldit</button> */}
+              {/* <button type='radio'>sold</button> */}
             </div>
           </div>
         </div>
