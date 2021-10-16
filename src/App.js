@@ -18,7 +18,7 @@ function App() {
 
   const [theme, setTheme] = useState(cookies.theme || 1);
   const [calSheetClicked, setSheetClicked] = useState(false);
-  console.log(cookies);
+  // console.log(cookies);
 
   return (
     <div className={`App ${theme === '2' ? 'theme2' : theme === '3' ? 'theme3' : null}`}>

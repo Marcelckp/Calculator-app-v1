@@ -12,7 +12,7 @@ function Buttons(props) {
 
     const operands = ['*', '+', '/', '-', '.'];
 
-    console.log(props.calSheet)
+    // console.log(props.calSheet)
 
     const addToValStr = num => {
         if (num === '/' || num === '*' || num === '+' || num === '-' || num === '.'){
@@ -55,7 +55,7 @@ function Buttons(props) {
         }
     }
 
-    console.log(completedCalculations)
+    // console.log(completedCalculations);
 
     return (
         <div>
