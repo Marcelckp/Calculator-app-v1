@@ -25,7 +25,7 @@ function App() {
           <div className="ThemeSlider">
             <p className={`Theme-Title`}>THEME</p>
             <div className='Theme-slider'>
-              <p onClick={(e) => setTheme(e.target.innerText)}><span>1</span>_<span>2</span>_<span>3</span></p>
+              <p onClick={(e) => setTheme(e.target.innerText)}><span>1</span> <span>2</span> <span>3</span></p>
               {/* <button type='radio'>soldit</button> */}
             </div>
           </div>

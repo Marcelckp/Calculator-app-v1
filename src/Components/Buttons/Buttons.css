@@ -211,19 +211,27 @@
 .calSheet-container-th2 {
     background-color: #D3CDCD;
     color: #37392E;
+    transition: all 1s ease;
 }
 
 .cal-showcase-th2 {
     background-color: rgb(189, 187, 187);
+    transition: all 1s ease;
 }
 
 .calSheet-container-th3 {
     background-color: #1E0836;
-    color: #FEE63E
+    color: #FEE63E;
+    transition: all 1s ease;
 }
 
 .cal-showcase-th3 {
     background-color: #291142;
+    transition: all 1s ease
+}
+
+.cal-showcase {
+    transition: all 1s ease
 }
 
 @media only screen and (min-width: 600px) {
