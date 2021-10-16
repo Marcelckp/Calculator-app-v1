@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://calculatorapp-marcel.netlify.app)
-- Live Site URL: [Add live site URL here](https://calculatorapp-marcel.netlify.app)
+- Solution URL: [Calculator App](https://calculatorapp-marcel.netlify.app)
+- Live Site URL: [Calculator App](https://calculatorapp-marcel.netlify.app)
 
 ## My process
 
