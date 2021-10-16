@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://zen-fermi-2e2094.netlify.app)
-- Live Site URL: [Add live site URL here](https://zen-fermi-2e2094.netlify.app)
+- Solution URL: [Add solution URL here](https://calculatorapp-marcel.netlify.app)
+- Live Site URL: [Add live site URL here](https://calculatorapp-marcel.netlify.app)
 
 ## My process
 
@@ -90,6 +90,6 @@ Moving forward I'll definitely use the lessons I learned when working with brows
 
 ## Author
 
-- Website - [Marcel Palmer](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Website - [Marcel Palmer](https://calculatorapp-marcel.netlify.app)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Marcelckp)
 - Twitter - [@marcelckpalmer](https://www.twitter.com/marcelckpalmer)
