@@ -86,7 +86,7 @@ Moving forward I'll definitely use the lessons I learned when working with brows
 
 ### Useful resources
 
-- [1](https://www.npmjs.com/package/react-cookie) - This helped me learn how to use cookies in react, I really liked this pattern and will use it going forward!
+- [React Cookies npm](https://www.npmjs.com/package/react-cookie) - This helped me learn how to use cookies in react, I really liked this pattern and will use it going forward!
 
 ## Author
 
