@@ -4,6 +4,7 @@
     min-width: 33%;
     max-width: 92%;
     /* height: 90%; */
+    transition: all 1s ease
 }
 
 .Buttons-container {
@@ -22,6 +23,50 @@
     column-gap: 10px;
     margin-bottom: 20px;
     transition: all 1s ease;
+}
+
+.calSheet-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    max-height: 480px;
+    background-color: #262c44;
+    border-radius: 10px;
+    margin: auto;
+    width: 92%;
+    color: white;
+    transition: all 1s ease;
+}
+
+.calSheet-container p {
+    padding: 20px
+}
+
+.cal-showcase {
+    padding: 20px 0;
+    width: 80%;
+    /* background-color: black; */
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: scroll;
+}
+
+.cal {
+    background-color: rgba(19, 22, 54, 0.671);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: scroll;
+}
+
+.indexNo {
+    padding-right: 20px
 }
 
 .Buttons-container-theme2 {
@@ -161,6 +206,24 @@
 
 .btn-pad-theme3:hover {
     background-color: #2a1342
+}
+
+.calSheet-container-th2 {
+    background-color: #D3CDCD;
+    color: #37392E;
+}
+
+.cal-showcase-th2 {
+    background-color: rgb(189, 187, 187);
+}
+
+.calSheet-container-th3 {
+    background-color: #1E0836;
+    color: #FEE63E
+}
+
+.cal-showcase-th3 {
+    background-color: #291142;
 }
 
 @media only screen and (min-width: 600px) {
