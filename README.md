@@ -91,5 +91,5 @@ Moving forward I'll definitely use the lessons I learned when working with brows
 ## Author
 
 - Website - [Marcel Palmer](https://calculatorapp-marcel.netlify.app)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Marcelckp)
+- Frontend Mentor - [@Marcelckp](https://www.frontendmentor.io/profile/Marcelckp)
 - Twitter - [@marcelckpalmer](https://www.twitter.com/marcelckpalmer)
